@@ -1,0 +1,264 @@
+object FormMain: TFormMain
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 859
+  ClientWidth = 775
+  Position = DesktopCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object AniIndicator1: TAniIndicator
+    Position.X = 464.000000000000000000
+    Position.Y = 120.000000000000000000
+  end
+  object btnPair: TButton
+    Position.X = 24.000000000000000000
+    Position.Y = 312.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Pair'
+    OnClick = btnPairClick
+  end
+  object Panel1: TPanel
+    Position.X = 448.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 305.000000000000000000
+    Size.Height = 233.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object ListBoxInfo: TListBox
+      Align = Bottom
+      Position.Y = 33.000000000000000000
+      Size.Width = 305.000000000000000000
+      Size.Height = 200.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      DisableFocusEffect = True
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 301.000000000000000000
+      Viewport.Height = 196.000000000000000000
+    end
+    object btnInfo: TButton
+      Align = Scale
+      Size.Width = 52.458145141601560000
+      Size.Height = 33.142242431640630000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Info'
+      OnClick = btnInfoClick
+    end
+  end
+  object btnCreateSocket: TButton
+    Enabled = False
+    Position.X = 448.000000000000000000
+    Position.Y = 280.000000000000000000
+    Size.Width = 145.000000000000000000
+    Size.Height = 65.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    Text = 'Connect'
+    OnClick = btnCreateSocketClick
+  end
+  object pnlFree: TPanel
+    Position.X = 24.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 265.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+    object FreeBtnRefresh: TButton
+      Align = Bottom
+      Position.Y = 243.000000000000000000
+      Size.Width = 201.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Refresh'
+      OnClick = FreeBtnRefreshClick
+    end
+    object FreeListBox: TListBox
+      Align = Client
+      Size.Width = 201.000000000000000000
+      Size.Height = 226.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      DisableFocusEffect = True
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 197.000000000000000000
+      Viewport.Height = 222.000000000000000000
+    end
+    object FreeLbl: TLabel
+      Align = Top
+      Size.Width = 201.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Free devices:'
+    end
+  end
+  object pnlPaired: TPanel
+    Position.X = 232.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 265.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 11
+    object PairedBtnRefresh: TButton
+      Align = Bottom
+      Position.Y = 243.000000000000000000
+      Size.Width = 201.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Refresh'
+      OnClick = PairedBtnRefreshClick
+    end
+    object PairedLbl: TLabel
+      Align = Top
+      Size.Width = 201.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Paired Devices'
+    end
+    object PairedListBox: TListBox
+      Align = Client
+      Size.Width = 201.000000000000000000
+      Size.Height = 226.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      DisableFocusEffect = True
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      OnChange = PairedListBoxChange
+      Viewport.Width = 197.000000000000000000
+      Viewport.Height = 222.000000000000000000
+    end
+  end
+  object pnlCommunication: TPanel
+    Position.X = 24.000000000000000000
+    Position.Y = 408.000000000000000000
+    Size.Width = 729.000000000000000000
+    Size.Height = 433.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 13
+    object memoCommIncomming: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      Align = Left
+      Position.Y = 17.000000000000000000
+      Size.Width = 377.000000000000000000
+      Size.Height = 416.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 373.000000000000000000
+      Viewport.Height = 412.000000000000000000
+    end
+    object lblCommunication: TLabel
+      Align = Top
+      Size.Width = 729.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Communication:'
+    end
+    object pnlSend: TPanel
+      Align = Right
+      Position.X = 384.000000000000000000
+      Position.Y = 17.000000000000000000
+      Size.Width = 345.000000000000000000
+      Size.Height = 416.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object edtSend: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Client
+        TabOrder = 0
+        Size.Width = 265.000000000000000000
+        Size.Height = 39.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object btnSend: TButton
+        Align = Right
+        Position.X = 265.000000000000000000
+        Position.Y = 377.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 39.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Send'
+        OnClick = btnSendClick
+      end
+      object memoCommOutgoing: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Align = Top
+        Size.Width = 345.000000000000000000
+        Size.Height = 377.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Viewport.Width = 341.000000000000000000
+        Viewport.Height = 373.000000000000000000
+      end
+    end
+    object Panel2: TPanel
+      Align = Center
+      Size.Width = 13.000000000000000000
+      Size.Height = 416.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+    end
+  end
+  object btnFreeSocket: TButton
+    Enabled = False
+    Position.X = 608.000000000000000000
+    Position.Y = 280.000000000000000000
+    Size.Width = 145.000000000000000000
+    Size.Height = 65.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Text = 'Disconnect'
+    OnClick = btnFreeSocketClick
+  end
+  object btnUnpair: TButton
+    Position.X = 232.000000000000000000
+    Position.Y = 312.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Unpair'
+    OnClick = btnUnpairClick
+  end
+  object Button1: TButton
+    Position.X = 672.000000000000000000
+    Position.Y = 376.000000000000000000
+    TabOrder = 15
+    Text = 'Button1'
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Position.X = 24.000000000000000000
+    Position.Y = 384.000000000000000000
+    TabOrder = 16
+    Text = 'Button2'
+  end
+  object Timer: TTimer
+    Enabled = False
+    Left = 112
+    Top = 89
+  end
+  object Bluetooth: TBluetooth
+    Enabled = False
+    OnDiscoveryEnd = BluetoothDiscoveryEnd
+    Left = 64
+    Top = 88
+  end
+end
